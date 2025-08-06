@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --green-color: #78C841;
+    --light-green-color: #78C841;
+    --orange-color: #FF9B2F;
+    --text-color: #1a2428;
+    --bg-color: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.volunteer-form {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border: 2px solid var(--light-green-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.volunteer-form h2, .volunteer-form h3 {
+    color: var(--green-color);
+    margin-bottom: 15px;
+}
+
+.volunteer-form label {
+    display: block;
+    font-weight: 500;
+    margin: 10px 0 5px;
+}
+
+.volunteer-form input[type="text"],
+.volunteer-form input[type="email"],
+.volunteer-form input[type="tel"],
+.volunteer-form input[type="date"],
+.volunteer-form input[type="number"],
+.volunteer-form select,
+.volunteer-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border 0.3s ease;
+}
+
+.volunteer-form input:focus,
+.volunteer-form select:focus,
+.volunteer-form textarea:focus {
+    border: 1.5px solid var(--green-color);
+    outline: none;
+}
+
+.checkbox-group, .radio-group {
+    margin-bottom: 15px;
+}
+
+.checkbox-group label, .radio-group label {
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.btn-submit {
+    background: var(--light-green-color);
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background: var(--orange-color);
+    transform: scale(1.05);
+}

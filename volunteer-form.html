@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Form</title>
+    <link rel="stylesheet" href="volunteer.css" />
+  </head>
+  <body>
+    <form action="submit_form.php" method="post" class="volunteer-form">
+      <h2>Volunteer Registration Form</h2>
+
+      <!-- Basic Information -->
+      <label>Full Name:</label>
+      <input type="text" name="full_name" required />
+
+      <label>Date of Birth:</label>
+      <input type="date" name="dob" required />
+
+      <label>Gender:</label>
+      <select name="gender">
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required />
+
+      <label>Address:</label>
+      <textarea name="address" rows="3" required></textarea>
+
+      <!-- Volunteer Preferences -->
+      <label>Why do you want to volunteer with us?</label>
+      <textarea name="motivation" rows="4" required></textarea>
+
+      <label>Areas of Interest:</label>
+      <div class="checkbox-group">
+        <label
+          ><input type="checkbox" name="interest[]" value="Fundraising" />
+          Fundraising</label
+        >
+        <label
+          ><input type="checkbox" name="interest[]" value="Event Management" />
+          Event Management</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="interest[]"
+            value="Teaching / Training"
+          />
+          Teaching / Training</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="interest[]"
+            value="Social Media / Marketing"
+          />
+          Social Media / Marketing</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="interest[]"
+            value="Administrative Work"
+          />
+          Administrative Work</label
+        >
+        <label
+          ><input type="checkbox" name="interest[]" value="Field Work" /> Field
+          Work</label
+        >
+      </div>
+
+      <label>How did you hear about us?</label>
+      <input type="text" name="referral" />
+
+      <!-- Availability -->
+      <label>Days Available:</label>
+      <div class="checkbox-group">
+        <label
+          ><input type="checkbox" name="availability[]" value="Weekdays" />
+          Weekdays</label
+        >
+        <label
+          ><input type="checkbox" name="availability[]" value="Weekends" />
+          Weekends</label
+        >
+        <label
+          ><input type="checkbox" name="availability[]" value="Both" />
+          Both</label
+        >
+      </div>
+
+      <label>Preferred Time Slot:</label>
+      <select name="time_slot">
+        <option value="">Select</option>
+        <option value="Morning">Morning</option>
+        <option value="Afternoon">Afternoon</option>
+        <option value="Evening">Evening</option>
+      </select>
+
+      <label>How many hours per week can you commit?</label>
+      <input type="number" name="hours" min="1" max="40" required />
+
+      <!-- Skills & Experience -->
+      <label>Do you have any prior volunteering experience?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="experience" value="Yes" /> Yes</label>
+        <label><input type="radio" name="experience" value="No" /> No</label>
+      </div>
+
+      <label>If Yes, please specify:</label>
+      <textarea name="experience_details" rows="3"></textarea>
+
+      <label>Relevant Skills:</label>
+      <textarea name="skills" rows="3"></textarea>
+
+      <!-- Emergency Contact -->
+      <h3>Emergency Contact</h3>
+      <label>Name:</label>
+      <input type="text" name="emergency_name" required />
+
+      <label>Relationship:</label>
+      <input type="text" name="emergency_relationship" required />
+
+      <label>Phone Number:</label>
+      <input type="tel" name="emergency_phone" required />
+
+      <!-- Additional Information -->
+      <label>Are you willing to travel for volunteering?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="travel" value="Yes" /> Yes</label>
+        <label><input type="radio" name="travel" value="No" /> No</label>
+      </div>
+
+      <label>Do you have any health conditions we should know about?</label>
+      <textarea name="health" rows="3"></textarea>
+
+      <!-- Consent -->
+      <div class="checkbox-group">
+        <label
+          ><input type="checkbox" name="terms" required /> I agree to the terms
+          and conditions.</label
+        >
+        <label
+          ><input type="checkbox" name="media_consent" /> I consent to the use
+          of my photos/videos for NGO purposes.</label
+        >
+      </div>
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </body>
+</html>
